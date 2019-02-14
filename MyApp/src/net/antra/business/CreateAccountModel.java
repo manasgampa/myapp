@@ -4,7 +4,7 @@ import net.antra.dao.CreateAccountDao;
 import net.antra.dto.CreateAccountDTO;
 
 public class CreateAccountModel {
-
+	//create account
 	public boolean createAccount(String userName,String password){
 		
 		CreateAccountDTO caDTO=new CreateAccountDTO();
