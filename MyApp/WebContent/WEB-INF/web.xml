@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>MyApp</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <servlet>  
+    <description></description>  
+    <display-name>LoginApp</display-name>  
+    <servlet-name>LoginServlet</servlet-name>  
+    <servlet-class>net.antra.controller.LoginServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>LoginServlet</servlet-name>  
+    <url-pattern>/LoginServlet</url-pattern>  
+  </servlet-mapping>  
+  <servlet>  
+    <description></description>  
+    <display-name>createAccount</display-name>  
+    <servlet-name>createAccount</servlet-name>  
+    <servlet-class>net.antra.controller.CreateAccountServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>createAccount</servlet-name>  
+    <url-pattern>/createAccount</url-pattern>  
+  </servlet-mapping>  
+   <servlet>  
+    <description></description>  
+    <display-name>Logout</display-name>  
+    <servlet-name>LogoutAccount</servlet-name>  
+    <servlet-class>net.antra.controller.LogoutServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>LogoutAccount</servlet-name>  
+    <url-pattern>/logout</url-pattern>  
+  </servlet-mapping> 
+  <servlet>  
+    <description></description>  
+    <display-name>insert</display-name>  
+    <servlet-name>insertRecord</servlet-name>  
+    <servlet-class>net.antra.controller.InsertRecordServlet</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>insertRecord</servlet-name>  
+    <url-pattern>/insert</url-pattern>  
+  </servlet-mapping> 
+   <servlet>  
+    <description></description>  
+    <display-name>retriveRecord</display-name>  
+    <servlet-name>retriveRecord</servlet-name>  
+    <servlet-class>net.antra.controller.RetriveRecord</servlet-class>  
+  </servlet>  
+  <servlet-mapping>  
+    <servlet-name>retriveRecord</servlet-name>  
+    <url-pattern>/retrive</url-pattern>  
+  </servlet-mapping>   
+  <filter>  
+	<filter-name>f1</filter-name>  
+	<filter-class>net.antra.controller.LoginFilter</filter-class>  
+  </filter>  
+   
+  <filter-mapping>  
+	<filter-name>f1</filter-name>  
+	<url-pattern>/*</url-pattern>  
+  </filter-mapping>  
+  
+</web-app>
